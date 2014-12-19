@@ -1,4 +1,4 @@
-if [ -d ~/dotfiles ]
+if [ -x `which git` && -d ~/dotfiles ]
 then
 	pushd .
 	cd ~/dotfiles
