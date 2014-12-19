@@ -9,4 +9,7 @@ git config core.worktree "../../"
 
 git reset --hard origin/master
 
+cd ~
+echo "gitdir: $HOME/dotfiles/.git" > ~/.git
+
 popd
