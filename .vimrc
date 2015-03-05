@@ -20,8 +20,7 @@ set nu
 set scrolloff=5
 set background=dark
 set t_Co=256
-set tabstop=4
-set expandtab
+set tabstop=4 shiftwidth=4 expandtab
 
 colorscheme jellybeans
 
