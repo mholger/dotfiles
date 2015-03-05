@@ -21,6 +21,7 @@ set scrolloff=5
 set background=dark
 set t_Co=256
 set tabstop=4
+set expandtab
 
 colorscheme jellybeans
 
