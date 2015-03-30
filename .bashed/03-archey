@@ -1,0 +1,4 @@
+if [ "x`which archey`" != "x" ]
+then
+    archey
+fi
