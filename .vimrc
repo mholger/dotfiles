@@ -7,6 +7,8 @@ else
 	set backup
 endif
 set backupdir=~/.vim/backup
+set cpo=aABceFs$
+set cm=blowfish
 set noswapfile
 set history=50
 set ruler
