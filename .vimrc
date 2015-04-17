@@ -16,15 +16,15 @@ set showcmd
 set incsearch
 set ignorecase
 set smartcase
-"set cursorline
+set cursorline
 set ls=2
 set nu
 set scrolloff=5
 set background=dark
-"set t_Co=256
+set t_Co=256
 set tabstop=4 shiftwidth=4 expandtab
 
-"colorscheme jellybeans
+colorscheme jellybeans
 "colorscheme monokai
 
 if &t_Co > 2 || has("gui_running")
