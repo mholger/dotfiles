@@ -1,4 +1,5 @@
-if [ "x`which archey`" != "x" ]
+which archey >/dev/null
+if [ $? -eq 0 ]
 then
     archey
 fi

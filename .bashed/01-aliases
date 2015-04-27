@@ -1,1 +1,5 @@
-alias vi=vim
+which vim >/dev/null
+if [ $? -eq 0 ]
+then
+    alias vi=vim
+fi

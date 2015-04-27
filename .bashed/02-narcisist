@@ -1,32 +1,37 @@
 
 if [[ -x /usr/bin/figlet ]]; then
     ART=/usr/bin/figlet
-else
+elsif [[ -x /usr/bin/banner ]]; then
     ART=/usr/bin/banner
-fi
-
-UN=`whoami`
-FUN=`finger ${UN} | grep Name: | awk '{print $5}'` 2>/dev/null
-if [[ "x${FUN}" == "x" ]]; then
-    FUN="${UN}"
 else
-    FUN="Mr. ${FUN}"
-fi
-HNOW=`date +'%H'`
-MORNEVE="Evening"
-if [[ ${HNOW} -ge 4 && ${HNOW} -lt 12 ]]; then
-    MORNEVE="Morning"
-elif [[ ${HNOW} -ge 12 && ${HNOW} -lt 17 ]]; then
-    MORNEVE="Afternoon"
-elif [[ ${HNOW} -ge 17 ]]; then
-    MORNEVE="Evening"
+    ART=""
 fi
 
-echo ""
-echo "Good ${MORNEVE}"
-echo ""
-$ART "${FUN}"
-echo ""
+if [ "x${ART}" != "X" ]
+then
+    UN=`whoami`
+    FUN=`finger ${UN} | grep Name: | awk '{print $5}'` 2>/dev/null
+    if [[ "x${FUN}" == "x" ]]; then
+        FUN="${UN}"
+    else
+        FUN="Mr. ${FUN}"
+    fi
+    HNOW=`date +'%H'`
+    MORNEVE="Evening"
+    if [[ ${HNOW} -ge 4 && ${HNOW} -lt 12 ]]; then
+        MORNEVE="Morning"
+    elif [[ ${HNOW} -ge 12 && ${HNOW} -lt 17 ]]; then
+        MORNEVE="Afternoon"
+    elif [[ ${HNOW} -ge 17 ]]; then
+        MORNEVE="Evening"
+    fi
+
+    echo ""
+    echo "Good ${MORNEVE}"
+    echo ""
+    $ART "${FUN}"
+    echo ""
+fi
 
 export NONCED=1
 
