@@ -1,13 +1,13 @@
 
 if [[ -x /usr/bin/figlet ]]; then
     ART=/usr/bin/figlet
-elsif [[ -x /usr/bin/banner ]]; then
+elsif [[ -x /usr/bin/banner ]]
     ART=/usr/bin/banner
 else
     ART=""
 fi
 
-if [ "x${ART}" != "X" ]
+if [ "x${ART}" != "x" ]
 then
     UN=`whoami`
     FUN=`finger ${UN} | grep Name: | awk '{print $5}'` 2>/dev/null
@@ -29,7 +29,7 @@ then
     echo ""
     echo "Good ${MORNEVE}"
     echo ""
-    $ART "${FUN}"
+    ${ART} "${FUN}"
     echo ""
 fi
 
