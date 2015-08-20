@@ -32,7 +32,8 @@ if &t_Co > 2 || has("gui_running")
 	set hlsearch
 endif
 
-let g:monokai_termtrans=1
+let g:jellybeans_termtrans=1
+"let g:monokai_termtrans=1
 
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
