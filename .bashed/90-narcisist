@@ -1,7 +1,7 @@
 
 if [[ -x /usr/bin/figlet ]]; then
     ART=/usr/bin/figlet
-elsif [[ -x /usr/bin/banner ]]
+elif [[ -x /usr/bin/banner ]]; then
     ART=/usr/bin/banner
 else
     ART=""
@@ -9,12 +9,12 @@ fi
 
 if [ "x${ART}" != "x" ]
 then
-    UN=`whoami`
-    FUN=`finger ${UN} | grep Name: | awk '{print $5}'` 2>/dev/null
-    if [[ "x${FUN}" == "x" ]]; then
-        FUN="${UN}"
+    
+    UN=`getent passwd $USER | cut -d: -f5 | cut -d, -f1 | tr ' ' '\n' | tail -1`
+    if [[ "x${UN}" == "x$USER" || "x${UN}" == "x" ]]; then
+        FUN="$USER"
     else
-        FUN="Mr. ${FUN}"
+        FUN="Mr. ${UN}"
     fi
     HNOW=`date +'%H'`
     MORNEVE="Evening"
@@ -27,9 +27,9 @@ then
     fi
 
     echo ""
-    echo "Good ${MORNEVE}"
+    #${ART} "Welcome ${FUN}"
+    ${ART} "Good ${MORNEVE} ${FUN}"
     echo ""
-    ${ART} "${FUN}"
     echo ""
 fi
 

@@ -1,0 +1,7 @@
+if [[ $HOSTNAME =~ ^([A-Za-z][A-Za-z][A-Za-z][0-9])([A-Za-z0-9]+)([0-9][0-9]) ]]
+then
+  DATACENTER=${BASH_REMATCH[1]}
+  SERVICE=${BASH_REMATCH[2]}
+  INSTANCE=${BASH_REMATCH[3]}
+  export DATACENTER SERVICE INSTANCE
+fi
