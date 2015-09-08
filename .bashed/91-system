@@ -1,0 +1,69 @@
+declare -A __BORDERS=(
+    [bar]="0;35m"
+    [content]="1;35m"
+)
+
+declare -a __LEVELS=(
+    [0]="normal"
+    [85]="warn"
+    [95]="crit"
+)
+
+declare -A __LEVELCOLORS=(
+    [normal]="1;32m"
+    [warn]="1;33m"
+    [crit]="1;31m"
+)
+
+LFS=`df -kl | grep ^/`
+
+echo -en "\e[${__BORDERS[bar]}+"
+for x in $(seq 0 27)
+do
+    echo -n "-"
+done
+echo -e "+"
+printf "\e[%s| \e[%s%-26s \e[%s|\n" "${__BORDERS[bar]}" "${__BORDERS[content]}" "Mounts" "${__BORDERS[bar]}"
+echo -en "+"
+for x in $(seq 0 27)
+do
+    echo -n "-"
+done
+echo -e "+"
+
+for i in "${LFS[@]}"
+do
+    if [[ ${i} =~ ^([A-Za-z0-9/]+)( +)([0-91]+)( +)([0-92]+)( +)([0-93]+)( +)([0-9]+)%( +)([A-Za-z0-9/]+) ]]
+    then
+        __DFFS=${BASH_REMATCH[1]}
+        __DFBLOCKS=${BASH_REMATCH[3]}
+        __DFUSED=${BASH_REMATCH[5]}
+        __DFAVAIL=${BASH_REMATCH[7]}
+        __DFUSE=${BASH_REMATCH[9]}
+        __DFMOUNT=${BASH_REMATCH[11]}
+
+        for __x in ${!__LEVELS[@]}
+        do
+            if [[ ${__DFUSE} -ge ${__x} ]]
+            then
+                __DFCOLOR=${__LEVELCOLORS[${__LEVELS[${__x}]}]}
+            fi
+        done
+
+        __DFERR=""
+        if [[ ${__DFUSE} -eq 100 ]]
+        then
+            __DFERR="**"
+        fi
+
+        printf "\e[%s|\e[%s%2s %-15s [%3i%%] %2s\e[%s|\n" "${__BORDERS[bar]}" "${__DFCOLOR}" "${__DFERR}" "${__DFMOUNT}" "${__DFUSE}" "${__DFERR}" "${__BORDERS[bar]}"
+
+    fi
+done
+echo -en "+"
+for x in $(seq 0 27)
+do
+    echo -n "-"
+done
+echo -e "+"
+echo ""

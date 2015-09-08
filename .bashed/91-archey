@@ -1,4 +1,4 @@
-which archey >/dev/null
+which archey >/dev/null 2>&1
 if [ $? -eq 0 ]
 then
     archey

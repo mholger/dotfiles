@@ -1,0 +1,14 @@
+declare -a DATACENTERS=(
+    [lab1]="test"
+    [use1]="prod"
+    [euw1]="prod"
+    [pci1]="secure"
+)
+
+declare -a DCCOLORS=(
+    [test]="1;32m"
+    [prod]="1;31m"
+    [secure]="1;36m"
+)
+
+export DATACENTERS DCCOLORS
