@@ -15,7 +15,7 @@ declare -A __LEVELCOLORS=(
     [crit]="1;31m"
 )
 
-LFS=`df -kl | grep ^/`
+mapfile -t LFS < <(df -kl | grep ^/)
 
 echo -en "\e[${__BORDERS[bar]}+"
 for x in $(seq 0 27)
