@@ -56,7 +56,7 @@ do
             __DFERR="**"
         fi
 
-        printf "\e[%s|\e[%s%2s %-15s [%3i%%] %2s\e[%s|\n" "${__BORDERS[bar]}" "${__DFCOLOR}" "${__DFERR}" "${__DFMOUNT}" "${__DFUSE}" "${__DFERR}" "${__BORDERS[bar]}"
+        printf "\e[%s|\e[1;35m%2s %-15s \e[1;30m[\e[%s%3i%%\e[1;30m] %2s\e[%s|\n" "${__BORDERS[bar]}" "${__DFERR}" "${__DFMOUNT}" "${__DFCOLOR}" "${__DFUSE}" "${__DFERR}" "${__BORDERS[bar]}"
 
     fi
 done
