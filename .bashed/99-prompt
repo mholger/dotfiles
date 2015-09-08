@@ -7,7 +7,7 @@ export GIT_PS1_SHOWCOLORHINTS=
 __HC="1;34m"
 if [ "x$DATACENTER" != "x" ]
 then
-    __HC="${DCCOLORS[$DATACENTERS[$DATACENTER]]}"
+    __HC="${DCCOLORS[${DATACENTERS[$DATACENTER]}]}"
 fi
 
 export PS1='\[\e[0;34m\][\[\e[1;34m\]\u\[\e[1;36m\]@\[\e[$__HC\]\h\[\e[0;34m\]] \[\e[1;36m\][\[\e[0;36m\]\W$(__git_ps1 " \[\e[1;35m\](\[\e[0;35m\]%s\[\e[1;35m\])")\[\e[1;36m\]]\r\n\[\e[1;30m\][\[\e[0;37m\]\! \[\e[1;37m\]\$\[\e[1;30m\]] \[\e[0;34m\]>\[\e[1;34m\]>\[\e[1;37m\]> \[\e[0;37m\]'
