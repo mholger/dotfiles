@@ -2,7 +2,7 @@ execute pathogen#infect()
 
 set nocompatible
 if has("vms")
-	set nobcakup
+	set nobackup
 else
 	set backup
 endif
