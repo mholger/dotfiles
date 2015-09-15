@@ -7,7 +7,7 @@ else
     ART="echo"
 fi
 
-if [ "x${ART}" != "x" ]
+if [[ "x${ART}" != "x" ]]
 then
     
     UN=`getent passwd $USER | cut -d: -f5 | cut -d, -f1 | tr ' ' '\n' | tail -1`
@@ -16,13 +16,13 @@ then
     else
         FUN="Mr. ${UN}"
     fi
-    HNOW=`date +'%H'`
+    HNOW=`date +'%-H'`
     MORNEVE="Evening"
     if [[ ${HNOW} -ge 4 && ${HNOW} -lt 12 ]]; then
         MORNEVE="Morning"
     elif [[ ${HNOW} -ge 12 && ${HNOW} -lt 17 ]]; then
         MORNEVE="Afternoon"
-    elif [[ ${HNOW} -ge 17 ]]; then
+    elif [[ ${HNOW} -ge 17 || ${HNOW} -lt 4 ]]; then
         MORNEVE="Evening"
     fi
 
