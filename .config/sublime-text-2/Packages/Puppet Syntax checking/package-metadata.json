@@ -1,1 +1,0 @@
-{"description": "Auto-check Puppet module syntax when you save a puppet module.", "url": "https://github.com/Stubbs/sublime-puppet-syntax", "platforms": ["*"], "version": "2014.12.05.14.06.32", "sublime_text": "<3000", "dependencies": []}
