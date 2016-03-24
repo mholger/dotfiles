@@ -6,7 +6,7 @@ fi
 for x in ~/.bashed/*
 do
 	DNONCE=`echo \`basename ${x}\`_NONCE`
-	if [[ -x ${x} ]]
+	if [[ -x ${x} || $OS == "Windows_NT" ]]
 	then
 		. ${x}
 	fi

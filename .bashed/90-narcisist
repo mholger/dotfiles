@@ -7,7 +7,7 @@ else
     ART="echo"
 fi
 
-if [[ "x${ART}" != "x" ]]
+if [[ $OS != "Windows_NT" && "x${ART}" != "x" ]]
 then
     
     UN=`getent passwd $USER | cut -d: -f5 | cut -d, -f1 | tr ' ' '\n' | tail -1`
