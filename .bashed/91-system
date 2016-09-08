@@ -15,7 +15,7 @@ declare -A __LEVELCOLORS=(
     [crit]="1;31m"
 )
 
-mapfile -t LFS < <(df -kl | egrep '(^/|\w:)')
+mapfile -t LFS < <(df -kl | egrep '(^/|\w:|rootfs)')
 
 echo -en "\e[${__BORDERS[bar]}+"
 for x in $(seq 0 27)
