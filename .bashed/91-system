@@ -15,7 +15,7 @@ declare -A __LEVELCOLORS=(
     [crit]="1;31m"
 )
 
-mapfile -t LFS < <(df -kl | grep ^/)
+mapfile -t LFS < <(df -kl | egrep '(^/|\w:)')
 
 echo -en "\e[${__BORDERS[bar]}+"
 for x in $(seq 0 27)
@@ -33,7 +33,7 @@ echo -e "+"
 
 for i in "${LFS[@]}"
 do
-    if [[ ${i} =~ ^([-A-Za-z0-9/]+)( +)([0-9]+)( +)([0-9]+)( +)([0-9]+)( +)([0-9]+)%( +)([-A-Za-z0-9/]+) ]]
+    if [[ ${i} =~ ^([-A-Za-z0-9/: ]+)?( +)([0-9]+)( +)([0-9]+)( +)([0-9]+)( +)([0-9]+)%( +)([-A-Za-z0-9/]+) ]]
     then
         __DFFS=${BASH_REMATCH[1]}
         __DFBLOCKS=${BASH_REMATCH[3]}
