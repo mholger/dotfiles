@@ -1,0 +1,9 @@
+if [[ `uname -r` =~ "Microsoft" ]]
+then
+    if [ -d /mnt/c/Users/matt_3e9l9gg ]
+    then
+        export GOPATH=/mnt/c/Users/matt_3e9l9gg/go
+    else
+        export GOPATH=/mnt/c/Users/matt/go
+    fi
+fi
