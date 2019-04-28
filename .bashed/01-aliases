@@ -1,8 +1,8 @@
-which vim >/dev/null
-if [ $? -eq 0 ]
-then
-    alias vi=vim
-fi
+#which vim >/dev/null
+#if [ $? -eq 0 ]
+#then
+#    alias vi=vim
+#fi
 
 if [[ `uname -r` =~ "Microsoft" ]]
 then
