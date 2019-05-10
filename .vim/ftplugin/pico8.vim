@@ -1,0 +1,1 @@
+/home/matt/.vim/bundle/vim-pico8-syntax/ftplugin/pico8.vim
