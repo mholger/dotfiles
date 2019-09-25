@@ -1,0 +1,23 @@
+#which vim >/dev/null
+#if [ $? -eq 0 ]
+#then
+#    alias vi=vim
+#fi
+
+winalias() {
+  if [ "`which $1`" == "" ]
+  then
+    alias $1="$1.exe"
+  fi
+}
+
+if [[ `uname -r` =~ "Microsoft" ]]
+then
+    winalias hab
+    winalias choco
+    winalias nomad
+    winalias consul
+    winalias vault
+    winalias packer
+    winalias terraform
+fi

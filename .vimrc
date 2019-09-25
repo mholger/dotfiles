@@ -69,7 +69,12 @@ hi NonText guibg=NONE ctermbg=NONE
 "autocmd vimenter * NERDTree
 
 " I do not like this, but C-H is br0ke for whatever reason
-nnoremap <C-J> <C-W><C-H>
-nnoremap <C-K> <C-W><C-J>
-nnoremap <C-I> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
+"#nnoremap <C-J> <C-W><C-H>
+"nnoremap <C-K> <C-W><C-J>
+"nnoremap <C-I> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+
+" New splits should open to the right or below the active split;
+" not sure why the default behavior is wrong, but ... it is. ;)
+set splitbelow
+set splitright
