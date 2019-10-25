@@ -43,6 +43,7 @@ let g:syntastic_aggregate_errors=1
 colorscheme nord
 "colorscheme jellybeans
 "colorscheme monokai
+"colorscheme synthwave
 
 "if &t_Co > 2 || has("gui_running")
 	syntax on
@@ -52,7 +53,7 @@ colorscheme nord
 let g:nord_termtrans=1
 let g:nord_bold_vertical_split_line = 1
 let g:nord_cursor_line_number_background = 1
-let g:nord_comment_brightness = 12
+"let g:nord_comment_brightness = 12
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled = 1
 
@@ -63,8 +64,8 @@ hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
 
 " After hyper.is fixes 256 color mode
-" set termguicolors
-" hi CursorLine ctermbg=8
+set termguicolors
+hi CursorLine ctermbg=8
 
 "autocmd vimenter * NERDTree
 

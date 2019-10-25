@@ -12,3 +12,7 @@ if [ -f ~/.bashedrc ]; then
     . ~/.bashedrc
 fi
 
+if [ -x ~/qmk_utils/activate_wsl.sh ]
+then
+    source ~/qmk_utils/activate_wsl.sh
+fi
