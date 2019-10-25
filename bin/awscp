@@ -1,0 +1,22 @@
+#!/bin/sh
+
+getKV() {
+    KEY=$1
+    X=$(cat /mnt/c/Users/matt_3e9l9gg/Downloads/credentials | grep ${KEY} | awk -F" = " '{print $2}')
+    echo ${X}
+}
+
+#cp /mnt/c/Users/matt_3e9l9gg/Downloads/credentials /mnt/c/Users/matt_3e9l9gg/.aws/credentials
+#cp /mnt/c/Users/matt_3e9l9gg/Downloads/credentials ~/.aws/credentials
+
+case $1 in
+    sussex)
+        AKID=`getKV aws_access_key_id`
+        AKAK=`getKV aws_secret_access_key`
+        AST=`getKV aws_session_token`
+        aws configure --profile sussex set aws_access_key_id $AKID
+        aws configure --profile sussex set aws_secret_access_key $AKAK
+        aws configure --profile sussex set aws_session_token $AST
+        aws configure --profile sussex set region us-east-1
+        ;;
+esac
