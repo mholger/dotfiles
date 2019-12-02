@@ -1,1 +1,1 @@
-export PATH=~/bin:/home/matt/.gem/ruby/2.2.0/bin:$PATH
+export PATH=~/bin:~/.local/bin:/home/matt/.gem/ruby/2.2.0/bin:$PATH
