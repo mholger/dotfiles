@@ -1,5 +1,6 @@
 if [[ `uname -r` =~ "Microsoft" ]]
 then
+    export PATH=${PATH}:/usr/local/go/bin
     if [ -d /mnt/c/Users/matt_3e9l9gg ]
     then
         export GOPATH=/mnt/c/Users/matt_3e9l9gg/go
