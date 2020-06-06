@@ -25,3 +25,6 @@
 [submodule ".vim/bundle/vim-pico8-syntax"]
 	path = .vim/bundle/vim-pico8-syntax
 	url = git://github.com/andmatand/vim-pico8-syntax.git
+[submodule ".tmux/plugins/tpm"]
+	path = .tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
