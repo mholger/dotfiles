@@ -1,8 +1,8 @@
 if [[ -x `which git` && -d ~/dotfiles ]]
 then
-	pushd .
-	cd ~/dotfiles
-	git pull
-	popd
+    pushd .
+    cd ~/dotfiles
+    git pull
+    popd
     git submodule update --init --recursive
 fi
