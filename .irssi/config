@@ -69,6 +69,14 @@ servers = (
     address = "irc.undernet.org";
     chatnet = "Undernet";
     port = "6667";
+  },
+  {
+    address = "cedar.tixer.net";
+    chatnet = "Tixer";
+    port = "6667";
+    use_tls = "no";
+    tls_verify = "no";
+    autoconnect = "yes";
   }
 );
 
@@ -147,6 +155,7 @@ chatnets = {
     max_msgs = "1";
     max_whois = "1";
   };
+  Tixer = { type = "IRC"; nick = "Holg3r"; };
 };
 
 channels = (
@@ -158,7 +167,8 @@ channels = (
   { name = "#ircsource"; chatnet = "IRCSource"; autojoin = "No"; },
   { name = "#netfuze"; chatnet = "NetFuze"; autojoin = "No"; },
   { name = "#oftc"; chatnet = "OFTC"; autojoin = "No"; },
-  { name = "silc"; chatnet = "SILC"; autojoin = "No"; }
+  { name = "silc"; chatnet = "SILC"; autojoin = "No"; },
+  { name = "#jezabel"; chatnet = "Tixer"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -416,5 +426,9 @@ statusbar = {
 settings = {
   core = { real_name = ""; user_name = "matt"; nick = "matt"; };
   "fe-text" = { actlist_sort = "refnum"; colors_ansi_24bit = "yes"; };
-  "fe-common/core" = { theme = "nord"; };
+  "fe-common/core" = {
+    theme = "nord";
+    hilight_nick_matches_everywhere = "yes";
+  };
 };
+hilights = ( { text = "nick"; nick = "yes"; word = "yes"; } );
