@@ -1,10 +1,15 @@
-if [[ `uname -r` =~ "Microsoft" ]]
+#if [[ `uname -r` =~ "Microsoft" ]]
+#then
+#    export PATH=${PATH}:/usr/local/go/bin
+#    if [ -d /mnt/c/Users/matt_3e9l9gg ]
+#    then
+#        export GOPATH=/mnt/c/Users/matt_3e9l9gg/go
+#    else
+#        export GOPATH=/mnt/c/Users/matt/go
+#    fi
+#fi
+
+if [ `which go` != "" ] && [ -d "$HOME/go" ]
 then
-    export PATH=${PATH}:/usr/local/go/bin
-    if [ -d /mnt/c/Users/matt_3e9l9gg ]
-    then
-        export GOPATH=/mnt/c/Users/matt_3e9l9gg/go
-    else
-        export GOPATH=/mnt/c/Users/matt/go
-    fi
+    export GOPATH=$HOME/go
 fi
