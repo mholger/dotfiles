@@ -3,6 +3,7 @@ then
     pushd .
     cd ~/dotfiles
     git pull
-    popd
+    cd ~
     git submodule update --init --recursive
+    popd
 fi
