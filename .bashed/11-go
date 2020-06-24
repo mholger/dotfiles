@@ -12,4 +12,9 @@
 if [ `which go` != "" ] && [ -d "$HOME/go" ]
 then
     export GOPATH=$HOME/go
+
+    if [ ! -x "$GOPATH/bin/powerline-go" ]
+    then
+        go get github.com/justjanne/powerline-go
+    fi
 fi
