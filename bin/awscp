@@ -24,6 +24,11 @@ then
     aws configure --profile ${AWS_PROFILE} set aws_secret_access_key $AKAK
     aws configure --profile ${AWS_PROFILE} set aws_session_token $AST
     aws configure --profile ${AWS_PROFILE} set region us-east-1
+
+    echo export AWS_ACCESS_KEY_ID=$AKID
+    echo export AWS_SECRET_ACCESS_KEY=$AKAK
+    echo export AWS_SESSION_TOKEN=$AST
+    echo export AWS_DEFAULT_REGION=us-east-1
 else
     echo "Something went awry; unable to manage profile..."
 fi
