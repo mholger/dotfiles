@@ -1,0 +1,47 @@
+term = xterm-256color
+
+background-opacity = 0.8
+background-blur = true
+#theme = nord
+#theme = cyberpunk
+#theme = CyberpunkScarletProtocol
+#theme = synthwave
+#theme = synthwave-everything
+#theme = SynthwaveAlpha
+theme = SynthwaveBeta
+
+#custom-shader = ~/.config/ghostty/shaders/amber-crt.glsl
+custom-shader = ~/.config/ghostty/shaders/bloom.glsl
+font-family = "lemon"
+font-size = 15
+
+keybind = super+s>\=new_split:right
+keybind = super+s>-=new_split:down
+keybind = super+s>h=goto_split:left
+keybind = super+s>j=goto_split:down
+keybind = super+s>k=goto_split:up
+keybind = super+s>l=goto_split:right
+keybind = super+s>w=close_surface
+keybind = super+s>==toggle_split_zoom
+
+keybind = super+s>c=new_tab
+keybind = super+s>]=move_tab:1
+keybind = super+s>[=move_tab:-1
+
+keybind = super+s>1=goto_tab:1
+keybind = super+s>2=goto_tab:2
+keybind = super+s>3=goto_tab:3
+keybind = super+s>4=goto_tab:4
+keybind = super+s>5=goto_tab:5
+keybind = super+s>6=goto_tab:6
+keybind = super+s>6=goto_tab:7
+keybind = super+s>6=goto_tab:8
+keybind = super+s>6=goto_tab:9
+
+keybind = super+s>up=scroll_page_up
+keybind = super+s>down=scroll_page_down
+
+keybind = global:cmd+backquote=toggle_quick_terminal
+
+keybind = super+s>+=toggle_fullscreen
+

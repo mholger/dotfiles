@@ -2,6 +2,8 @@ filetype plugin on
 execute pathogen#infect()
 
 set nocompatible
+set modelines=5
+
 "if has("vms")
 	set nobackup
 "else
@@ -18,6 +20,7 @@ set incsearch
 set ignorecase
 set smartcase
 set cursorline
+set cursorcolumn
 set ls=2
 set nu
 set scrolloff=5
@@ -40,10 +43,10 @@ let g:syntastic_aggregate_errors=1
 "set statusline+=%*
 "end lifted bits
 
-colorscheme nord
+"colorscheme nord
 "colorscheme jellybeans
 "colorscheme monokai
-"colorscheme synthwave
+colorscheme synthwave
 
 "if &t_Co > 2 || has("gui_running")
 	syntax on
@@ -59,13 +62,14 @@ let g:airline#extensions#tabline#enabled = 1
 
 "let g:jellybeans_termtrans=1
 "let g:monokai_termtrans=1
+let g:synthwave_termtrans=1
 
 hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
 
 " After hyper.is fixes 256 color mode
 set termguicolors
-hi CursorLine ctermbg=8
+hi CursorLine ctermbg=0
 
 "autocmd vimenter * NERDTree
 
@@ -79,3 +83,6 @@ hi CursorLine ctermbg=8
 " not sure why the default behavior is wrong, but ... it is. ;)
 set splitbelow
 set splitright
+
+highlight CursorColumn guibg=#3a3a50
+highlight CursorLine guibg=#2a2a40
