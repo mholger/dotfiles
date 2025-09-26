@@ -40,7 +40,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   vec2 step = vec2(1.414) / iResolution.xy;
 
   for (int i = 0; i < 24; i++) {
-    vec3 s = samples[i] * 0.825; // coefficient adjusts intensity
+    vec3 s = samples[i] * 0.8; // coefficient adjusts intensity
     vec4 c = texture(iChannel0, uv + s.xy * step);
     float l = lum(c);
     if (l > 0.2) {

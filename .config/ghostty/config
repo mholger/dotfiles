@@ -1,5 +1,8 @@
 term = xterm-256color
 
+cursor-style = block
+cursor-style-blink = true
+
 background-opacity = 0.8
 background-blur = true
 #theme = nord
@@ -23,6 +26,11 @@ keybind = super+s>k=goto_split:up
 keybind = super+s>l=goto_split:right
 keybind = super+s>w=close_surface
 keybind = super+s>==toggle_split_zoom
+keybind = super+s>e=equalize_splits
+keybind = super+s>.=resize_split:right,8
+keybind = super+s>,=resize_split:left,8
+keybind = super+s>shift+,=resize_split:up,16
+keybind = super+s>shift+.=resize_split:down,16
 
 keybind = super+s>c=new_tab
 keybind = super+s>]=move_tab:1
