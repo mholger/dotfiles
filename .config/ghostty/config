@@ -2,6 +2,7 @@ term = xterm-256color
 
 cursor-style = block
 cursor-style-blink = true
+shell-integration-features = no-cursor
 
 background-opacity = 0.8
 background-blur = true
@@ -18,7 +19,7 @@ custom-shader = ~/.config/ghostty/shaders/bloom.glsl
 font-family = "lemon"
 font-size = 15
 
-keybind = super+s>\=new_split:right
+keybind = super+s>/=new_split:right
 keybind = super+s>-=new_split:down
 keybind = super+s>h=goto_split:left
 keybind = super+s>j=goto_split:down
