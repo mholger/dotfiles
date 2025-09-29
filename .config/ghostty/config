@@ -20,6 +20,7 @@ font-family = "lemon"
 font-size = 18
 
 keybind = super+s>/=new_split:right
+keybind = super+s>\=new_split:left
 keybind = super+s>-=new_split:down
 keybind = super+s>h=goto_split:left
 keybind = super+s>j=goto_split:down
