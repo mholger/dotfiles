@@ -84,5 +84,5 @@ set termguicolors
 set splitbelow
 set splitright
 
-highlight CursorColumn guibg=#3a3a50
+highlight CursorColumn guibg=#2f2f4f
 highlight CursorLine guibg=#2a2a40

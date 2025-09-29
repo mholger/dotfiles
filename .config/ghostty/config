@@ -53,5 +53,6 @@ keybind = super+s>down=scroll_page_down
 
 keybind = global:cmd+backquote=toggle_quick_terminal
 
+# Linux-only options
 keybind = super+s>+=toggle_fullscreen
-
+keybind = super+s>t=toggle_tab_overview
