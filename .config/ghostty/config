@@ -17,7 +17,7 @@ theme = SynthwaveBeta
 #custom-shader = ~/.config/ghostty/shaders/amber-crt.glsl
 custom-shader = ~/.config/ghostty/shaders/bloom.glsl
 font-family = "lemon"
-font-size = 15
+font-size = 18
 
 keybind = super+s>/=new_split:right
 keybind = super+s>-=new_split:down
