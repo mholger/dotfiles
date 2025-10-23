@@ -15,6 +15,7 @@ background-blur = true
 theme = SynthwaveBeta
 
 #custom-shader = ~/.config/ghostty/shaders/amber-crt.glsl
+#custom-shader = ~/.config/ghostty/shaders/scanlines.glsl
 custom-shader = ~/.config/ghostty/shaders/bloom.glsl
 font-family = "lemon"
 font-size = 18
