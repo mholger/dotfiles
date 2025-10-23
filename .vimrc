@@ -22,6 +22,7 @@ set smartcase
 set cursorline
 set cursorcolumn
 set ls=2
+set nu
 set rnu
 set scrolloff=5
 "set background=dark
