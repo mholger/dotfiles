@@ -20,4 +20,5 @@ then
     winalias vault
     winalias packer
     winalias terraform
+    alias vi=nvim
 fi
