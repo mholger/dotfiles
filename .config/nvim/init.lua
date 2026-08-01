@@ -73,5 +73,5 @@ end
 
 apply_theme()
 
-require("cursor")
-require("scroll")
+require('cursor')
+require('scroll')

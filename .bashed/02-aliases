@@ -11,7 +11,7 @@ winalias() {
   fi
 }
 
-if [[ `uname -r` =~ "Microsoft" ]]
+if [[ $(uname -r) =~ "icrosoft" ]]
 then
     winalias hab
     winalias choco
