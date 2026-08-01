@@ -74,3 +74,4 @@ end
 apply_theme()
 
 require("cursor")
+require("scroll")
